@@ -45,3 +45,10 @@ rm -rf %{buildroot}
 %doc CHANGES COPYING README
 %{_datadir}/cacti/plugins/weathermap
 
+
+
+%changelog
+* Fri Jul 01 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.97a-1mdv2011.0
++ Revision: 688425
+- import cacti-plugin-weathermap
+
