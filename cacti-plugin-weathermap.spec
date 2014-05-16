@@ -1,19 +1,17 @@
 %define upstream_name weathermap
-%define name cacti-plugin-%{upstream_name}
-%define version 0.97a
-%define release %mkrel 1
+%define __noautoreq /usr/bin/php
 
-Name:       %{name}
-Version:    %{version}
-Release:    %{release}
+Name:       cacti-plugin-%{upstream_name}
+Version:    0.97a
+Release:    2
 Summary:    Weathermap plugin for cacti
+
 License:    GPL
 Group:      Monitoring
 Url:        http://www.network-weathermap.com/
 Source0:    http://www.network-weathermap.com/files/php-weathermap-%{version}.zip
 Requires:   cacti
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 Weathermap is a network visualisation tool, to take data you already have and
@@ -28,7 +26,6 @@ text files. Other sources are via plugins or external scripts.
 %setup -q -n weathermap
 
 %install
-rm -rf %{buildroot}
 
 install -d -m 755 %{buildroot}%{_datadir}/cacti/plugins/weathermap
 cp -ap * %{buildroot}%{_datadir}/cacti/plugins/weathermap
@@ -38,17 +35,7 @@ rm -f CHANGES README COPYING
 popd
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
 %doc CHANGES COPYING README
 %{_datadir}/cacti/plugins/weathermap
-
-
-
-%changelog
-* Fri Jul 01 2011 Guillaume Rousse <guillomovitch@mandriva.org> 0.97a-1mdv2011.0
-+ Revision: 688425
-- import cacti-plugin-weathermap
-
