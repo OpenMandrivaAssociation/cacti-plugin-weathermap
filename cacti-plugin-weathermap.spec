@@ -3,7 +3,7 @@
 
 Name:       cacti-plugin-%{upstream_name}
 Version:    0.97a
-Release:    2
+Release:    3
 Summary:    Weathermap plugin for cacti
 
 License:    GPL
