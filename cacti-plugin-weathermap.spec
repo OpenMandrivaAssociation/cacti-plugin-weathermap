@@ -8,7 +8,7 @@ Summary:    Weathermap plugin for cacti
 
 License:    GPL
 Group:      Monitoring
-Url:        http://www.network-weathermap.com/
+Url:        https://www.network-weathermap.com/
 Source0:    http://www.network-weathermap.com/files/php-weathermap-%{version}.zip
 Requires:   cacti
 BuildArch:  noarch
